@@ -13,6 +13,6 @@ import pickle
 loaded_model = pickle.load(open('mpg_regression.sav','rb'))
 
 prediction = loaded_model.predict([[displacement,horsepower,weight,acceleration]])
-st.subheader('predicted mpg value for above parameter is{prediction}')
+st.subheader('predicted mpg value for above parameter is{prediction[0]}')
 
 st.write(prediction)
